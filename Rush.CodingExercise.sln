@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FD7F520-9ADB-465B-B9B4-080E32CC90DB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rush.CodingExercise.Data", "Rush.CodingExcercise.Data\Rush.CodingExercise.Data.csproj", "{DBCC5A2B-49C3-492F-ACE5-2C0BC2BB488D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rush.CodingExercise.Api.Basic", "Rush.CodingExercise.Api.Basic\Rush.CodingExercise.Api.Basic.csproj", "{5B8B56F8-EC12-4DE6-8B48-B6F273D1E2F4}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Rush.CodingExercise.Data.Schema", "Rush.CodingExercise.Data.Schema\Rush.CodingExercise.Data.Schema.sqlproj", "{4BB0A86A-8248-4407-9ABF-2B0C5DE5ADC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rush.CodingExercise.Service.Order", "Rush.CodingExercise.Service.Order\Rush.CodingExercise.Service.Order.csproj", "{6161F88D-0FFE-4257-8A50-99025DD8B699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rush.CodingExercise.Api.Function", "Rush.CodingExercise.Api.Function\Rush.CodingExercise.Api.Function.csproj", "{650B8438-26D8-4B8F-8413-C58589B3C318}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBCC5A2B-49C3-492F-ACE5-2C0BC2BB488D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBCC5A2B-49C3-492F-ACE5-2C0BC2BB488D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBCC5A2B-49C3-492F-ACE5-2C0BC2BB488D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBCC5A2B-49C3-492F-ACE5-2C0BC2BB488D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8B56F8-EC12-4DE6-8B48-B6F273D1E2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8B56F8-EC12-4DE6-8B48-B6F273D1E2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8B56F8-EC12-4DE6-8B48-B6F273D1E2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8B56F8-EC12-4DE6-8B48-B6F273D1E2F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB0A86A-8248-4407-9ABF-2B0C5DE5ADC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB0A86A-8248-4407-9ABF-2B0C5DE5ADC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB0A86A-8248-4407-9ABF-2B0C5DE5ADC8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4BB0A86A-8248-4407-9ABF-2B0C5DE5ADC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB0A86A-8248-4407-9ABF-2B0C5DE5ADC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB0A86A-8248-4407-9ABF-2B0C5DE5ADC8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6161F88D-0FFE-4257-8A50-99025DD8B699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6161F88D-0FFE-4257-8A50-99025DD8B699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6161F88D-0FFE-4257-8A50-99025DD8B699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6161F88D-0FFE-4257-8A50-99025DD8B699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650B8438-26D8-4B8F-8413-C58589B3C318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650B8438-26D8-4B8F-8413-C58589B3C318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650B8438-26D8-4B8F-8413-C58589B3C318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650B8438-26D8-4B8F-8413-C58589B3C318}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99558B9B-AEB3-4391-A50C-47CD4A9CEDEB}
+	EndGlobalSection
+EndGlobal
