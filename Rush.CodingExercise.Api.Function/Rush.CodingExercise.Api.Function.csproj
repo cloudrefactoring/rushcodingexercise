@@ -10,6 +10,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rush.CodingExercise.Api.Basic\Rush.CodingExercise.Api.Basic.csproj" />
+    <ProjectReference Include="..\Rush.CodingExercise.Messaging\Rush.CodingExercise.Messaging.csproj" />
     <ProjectReference Include="..\Rush.CodingExercise.Service.Order\Rush.CodingExercise.Service.Order.csproj" />
   </ItemGroup>
   <ItemGroup>

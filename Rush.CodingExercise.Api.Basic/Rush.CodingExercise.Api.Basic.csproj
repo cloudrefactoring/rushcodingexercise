@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Rush.CodingExercise.Messaging\Rush.CodingExercise.Messaging.csproj" />
     <ProjectReference Include="..\Rush.CodingExercise.Service.Order\Rush.CodingExercise.Service.Order.csproj" />
   </ItemGroup>
 

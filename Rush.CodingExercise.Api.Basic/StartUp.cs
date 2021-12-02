@@ -1,6 +1,7 @@
 using Rush.CodingExercise.Data;
 using Rush.CodingExercise.Service.Data;
 using Rush.CodingExercise.Api.Basic;
+using Rush.CodingExercise.Messaging;
 
 var builder = WebApplication.CreateBuilder(args);
 

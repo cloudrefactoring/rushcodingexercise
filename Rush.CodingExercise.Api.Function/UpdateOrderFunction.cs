@@ -15,6 +15,7 @@ using Rush.CodingExercise.Service.Data;
 using UpdateOrderModel = Rush.CodingExercise.Data.Model.DTO.UpdateOrder;
 using Rush.CodingExercise.Data.Model.Enum;
 using System;
+using Rush.CodingExercise.Messaging;
 
 namespace Rush.CodingExercise.Api.Function
 {
@@ -23,7 +24,6 @@ namespace Rush.CodingExercise.Api.Function
         private readonly ILogger<UpdateOrderFunction> _logger;
         private readonly IOrderProcess _orderProcess;
         private readonly IServiceBus _serviceBus;
-
 
         public UpdateOrderFunction(ILogger<UpdateOrderFunction> log, IOrderProcess orderProcess, IServiceBus serviceBus)
         {

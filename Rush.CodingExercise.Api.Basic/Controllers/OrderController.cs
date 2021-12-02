@@ -5,6 +5,7 @@ using Rush.CodingExercise.Data.Model.Enum;
 using CreateOrderModel = Rush.CodingExercise.Data.Model.DTO.CreateOrder;
 using UpdateOrderModel = Rush.CodingExercise.Data.Model.DTO.UpdateOrder;
 using OrderModel = Rush.CodingExercise.Data.Model.Order;
+using Rush.CodingExercise.Messaging;
 
 namespace Rush.CodingExercise.Api.Basic.Controllers;
 

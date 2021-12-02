@@ -1,9 +1,8 @@
 ﻿using Azure.Messaging.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using System.Text.Json;
-using System.Threading.Tasks;
 
-namespace Rush.CodingExercise.Api.Function;
+namespace Rush.CodingExercise.Messaging;
 
 public class ServiceBus : IServiceBus
 {

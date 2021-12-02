@@ -10,6 +10,7 @@ using Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Enums;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using Rush.CodingExercise.Messaging;
 using Rush.CodingExercise.Service.Data;
 
 using CreateOrderModel = Rush.CodingExercise.Data.Model.DTO.CreateOrder;

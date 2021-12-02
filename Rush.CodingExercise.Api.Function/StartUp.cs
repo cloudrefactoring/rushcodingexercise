@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Rush.CodingExercise.Api.Function;
 using Rush.CodingExercise.Data;
+using Rush.CodingExercise.Messaging;
 using Rush.CodingExercise.Service.Data;
 
 [assembly: FunctionsStartup(typeof(Startup))]

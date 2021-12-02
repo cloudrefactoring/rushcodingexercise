@@ -1,5 +1,5 @@
 ﻿
-namespace Rush.CodingExercise.Api.Basic;
+namespace Rush.CodingExercise.Messaging;
 
 public interface IServiceBus
 {
