@@ -1,4 +1,4 @@
-# rushcodingexercise
+# Rush Enterprises Coding Exercise
 Coding exercise for job interview with Rush Enterprises
 
 Created services using two different methods:
