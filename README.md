@@ -4,6 +4,7 @@ Coding exercise for job interview with Rush Enterprises
 Created services using two different methods:
 
 1- Basic .Net Core 6 WebApi, using traditional controllers on a docker container
+
 2- Azure Functions
 
 Both share common components, Data and Service Order. 
