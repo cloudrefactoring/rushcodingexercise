@@ -8,6 +8,8 @@ Created services using two different methods:
 
 Both share common components, Data and Service Order. 
 Where Data project/component contains the SQL Connector/Adapter using Dapper and the common data models as well as DTO objects.
+There is also a Data.Schema SQL project which contains the database itself and it can be deployed to azure.
+You can retrieve the connection string from the Api.Basic project or Api.Function settings file.
 
 - Created a SQL database in Azure
 - Created Service Bus in Azure 
