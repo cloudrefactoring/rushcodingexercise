@@ -13,7 +13,6 @@ using Newtonsoft.Json;
 using Rush.CodingExercise.Service.Data;
 
 using UpdateOrderModel = Rush.CodingExercise.Data.Model.DTO.UpdateOrder;
-using OrderModel = Rush.CodingExercise.Data.Model.Order;
 using Rush.CodingExercise.Data.Model.Enum;
 using System;
 
@@ -23,60 +22,31 @@ namespace Rush.CodingExercise.Api.Function
     {
         private readonly ILogger<UpdateOrderFunction> _logger;
         private readonly IOrderProcess _orderProcess;
+        private readonly IServiceBus _serviceBus;
 
-        public UpdateOrderFunction(ILogger<UpdateOrderFunction> log, IOrderProcess orderProcess)
+
+        public UpdateOrderFunction(ILogger<UpdateOrderFunction> log, IOrderProcess orderProcess, IServiceBus serviceBus)
         {
             _logger = log;
             _orderProcess = orderProcess;
+            _serviceBus = serviceBus;
         }
 
         [FunctionName("UpdateOrder")]
         [OpenApiOperation(operationId: "Run", tags: new[] { "name" })]
         [OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
-        [OpenApiParameter(name: "name", In = ParameterLocation.Query, Required = true, Type = typeof(string), Description = "The **Name** parameter")]
+        [OpenApiRequestBody(contentType: "application/json", bodyType: typeof(UpdateOrderModel), Description = "Update Order Payload", Required = true)]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "text/plain", bodyType: typeof(string), Description = "The OK response")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "patch", Route = null)] HttpRequest req)
         {
-            _logger.LogInformation("Creating order from Azure Function.");
+            _logger.LogInformation("Updating order from Azure Function.");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var updateOrderModel = JsonConvert.DeserializeObject<UpdateOrderModel>(requestBody);
 
-            if (updateOrderModel == null)
-            {
-                var errorMessage = "Invalid update order request object.";
-                _logger.LogError(errorMessage, updateOrderModel);
-
-                return new BadRequestObjectResult(errorMessage);
-            }
-
-            if (updateOrderModel.OrderNumber == null)
-            {
-                var errorMessage = "Order number is required.";
-                _logger.LogError(errorMessage, updateOrderModel);
-
-                return new BadRequestObjectResult(errorMessage);
-            }
-
-            if (updateOrderModel.Status == null)
-            {
-                var errorMessage = "Status is required";
-                _logger.LogError(errorMessage, updateOrderModel);
-
-                return new BadRequestObjectResult(errorMessage);
-            }
-
-            if (!Enum.IsDefined(typeof(OrderStatus), updateOrderModel.Status))
-            {
-                var errorMessage = "Invalid Status Value. Acceptable values are: Pending,Ordered,Billed,Shipped,Delivered";
-                _logger.LogError(errorMessage, updateOrderModel);
-
-                return new BadRequestObjectResult(errorMessage);
-            }
-
             var order = await _orderProcess.Update(updateOrderModel.OrderNumber, updateOrderModel.Total, updateOrderModel.Status);
-            //await _serviceBus.SendMessage(order);
+            await _serviceBus.SendMessage(order);
 
             _logger.LogInformation("Order Updated from Azure Function", order);
             return new OkObjectResult(order);

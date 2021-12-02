@@ -1,9 +1,16 @@
-﻿namespace Rush.CodingExercise.Data.Model.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Rush.CodingExercise.Data.Model.DTO;
+
+[UpdateOrderModelValidator]
+public class UpdateOrder
 {
-    public class UpdateOrder
-    {
-        public string? OrderNumber { get; set; }
-        public decimal Total { get; set; }
-        public string? Status { get; set; }
-    }
+    [OrderNumberValidation]
+    public string? OrderNumber { get; set; }
+
+    public decimal Total { get; set; }
+
+    [OrderStatusValidation]
+    public string Status { get; set; } = default!;
 }
+

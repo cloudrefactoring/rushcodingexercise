@@ -16,7 +16,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Rush.CodingExercise.Data.Sc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rush.CodingExercise.Service.Order", "Rush.CodingExercise.Service.Order\Rush.CodingExercise.Service.Order.csproj", "{6161F88D-0FFE-4257-8A50-99025DD8B699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rush.CodingExercise.Api.Function", "Rush.CodingExercise.Api.Function\Rush.CodingExercise.Api.Function.csproj", "{650B8438-26D8-4B8F-8413-C58589B3C318}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rush.CodingExercise.Api.Function", "Rush.CodingExercise.Api.Function\Rush.CodingExercise.Api.Function.csproj", "{650B8438-26D8-4B8F-8413-C58589B3C318}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

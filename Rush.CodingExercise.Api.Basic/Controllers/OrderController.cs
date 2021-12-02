@@ -62,30 +62,6 @@ public class OrderController : ControllerBase
             return BadRequest(errorMessage);
         }
 
-        if (createOrderModel.OrderNumber == null)
-        {
-            var errorMessage = "Order number is required.";
-            _logger.LogError(errorMessage, createOrderModel);
-
-            return BadRequest(errorMessage);
-        }
-
-        if (createOrderModel.Status == null)
-        {
-            var errorMessage = "Status is required";
-            _logger.LogError(errorMessage, createOrderModel);
-
-            return BadRequest(errorMessage);
-        }
-
-        if (!Enum.IsDefined(typeof(OrderStatus), createOrderModel.Status))
-        {
-            var errorMessage = "Invalid Status Value. Acceptable values are: Pending,Ordered,Billed,Shipped,Delivered";
-            _logger.LogError(errorMessage, createOrderModel);
-
-            return BadRequest(errorMessage);
-        }
-
         var order = await _orderProcess.Update(createOrderModel.OrderNumber,createOrderModel.Total, createOrderModel.Status);
         await _serviceBus.SendMessage(order);
 
